@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Saima ❤️</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0; min-height:100vh; display:flex; justify-content:center; align-items:center;
+  overflow:hidden; font-family:Georgia,serif;
+  background:linear-gradient(135deg,#ff758c,#ff7eb3,#ffb6c1);
+  color:white; text-align:center;
+}
+.card{
+  width:min(90%,520px); padding:48px 28px; border-radius:28px;
+  background:rgba(255,255,255,.16); backdrop-filter:blur(12px);
+  box-shadow:0 20px 60px rgba(120,0,40,.25);
+  border:1px solid rgba(255,255,255,.3);
+}
+h1{font-size:clamp(38px,10vw,64px);margin:0 0 12px}
+p{font-size:clamp(20px,5vw,28px);line-height:1.5;margin:12px 0}
+.heart{font-size:72px;animation:beat 1s infinite}
+button{
+  margin-top:22px;padding:14px 28px;border:0;border-radius:999px;
+  background:white;color:#e83e6f;font-size:18px;font-weight:bold;cursor:pointer;
+}
+#secret{display:none;margin-top:22px;font-size:20px}
+.f{position:fixed;top:-30px;font-size:24px;animation:fall linear infinite;opacity:.8}
+@keyframes beat{50%{transform:scale(1.15)}}
+@keyframes fall{to{transform:translateY(110vh) rotate(360deg)}}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="heart">❤️</div>
+  <h1>Saima, babe</h1>
+  <p>I just wanted to tell you something...</p>
+  <p><strong>I LOVE YOU ❤️</strong></p>
+  <button onclick="document.getElementById('secret').style.display='block'">Tap me 💌</button>
+  <div id="secret">You make my heart smile. I'm really lucky to have you. 🥹❤️</div>
+</div>
+<script>
+for(let i=0;i<25;i++){
+  const x=document.createElement('div'); x.className='f'; x.textContent='❤️';
+  x.style.left=Math.random()*100+'vw';
+  x.style.animationDuration=(4+Math.random()*6)+'s';
+  x.style.animationDelay=(-Math.random()*8)+'s';
+  document.body.appendChild(x);
+}
+</script>
+</body>
+</html>
